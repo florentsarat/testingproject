@@ -1,0 +1,31 @@
+{
+  "modelVersion" : "2.2",
+  "id" : "dsd",
+  "name" : "dsd",
+  "lastUpdate" : 1637248988997,
+  "rows" : [
+    [ ]
+  ],
+  "assets" : [
+    {
+      "id" : "76227e18-6a66-42f4-989c-37730658bd7b",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "eba26dbd-dfe9-4916-a703-206e165c26a6",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : { },
+  "hasValidationError" : false,
+  "uuid" : "e4dd214f-1cfa-4efb-8de2-aa4e352fd102",
+  "type" : "layout",
+  "description" : "Page generated with Bonita UI designer"
+}

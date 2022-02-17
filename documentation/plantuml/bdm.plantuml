@@ -1,0 +1,19 @@
+@startuml
+
+package com.company.model {
+
+    class Request {
+        +persistenceId : Long
+        +itemID : String
+        +instock : Boolean
+        +qtyrequested : Integer
+    }
+
+}
+
+
+legend top left
+&#9830; Composition relation  &#9826; Aggregation relation  &#42; Multiple relation
+endlegend
+
+@enduml

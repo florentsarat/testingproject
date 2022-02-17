@@ -1,0 +1,6 @@
+= Use static custom content
+:nofooter:
+
+. Create your https://asciidoctor.org/docs/asciidoc-writers-guide/[asciidoc^] files in this folder
+. Customize the template in which you want to include this content
+. Include your file using `include::documentation/static/yourFile.adoc[]` at the desired location in the template

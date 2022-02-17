@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="212px" preserveAspectRatio="none" style="width:445px;height:212px;" version="1.1" viewBox="0 0 445 212" width="445px" zoomAndPan="magnify"><defs><filter height="300%" id="f1x3in6zxyn9ht" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#DDDDDD" height="27.6094" rx="5" ry="5" style="stroke:#000000;stroke-width:1.0;" width="421" x="8" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="409" x="14" y="27.5332">♦ Composition relation  ♢ Aggregation relation  * Multiple relation</text><!--MD5=[bc580992a0121350dbeb037df29eb0ce]
+cluster com.company.model--><polygon fill="#FFFFFF" filter="url(#f1x3in6zxyn9ht)" points="143,50.6094,291,50.6094,298,74.2188,307,74.2188,307,205.6094,143,205.6094,143,50.6094" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="143" x2="298" y1="74.2188" y2="74.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="142" x="147" y="67.1426">com.company.model</text><!--MD5=[0851f84a889f989e7bb0bebc385d0f09]
+class Request--><rect codeLine="4" fill="#FEFECE" filter="url(#f1x3in6zxyn9ht)" height="103.3438" id="Request" style="stroke:#A80036;stroke-width:1.5;" width="132" x="159" y="86.6094"/><ellipse cx="197.85" cy="102.6094" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M200.6156,98.4844 Q200.7719,98.2656 200.9594,98.1563 Q201.1469,98.0469 201.3656,98.0469 Q201.7406,98.0469 201.975,98.3125 Q202.2094,98.5625 202.2094,99.1719 L202.2094,100.625 Q202.2094,101.2344 201.975,101.5 Q201.7406,101.7656 201.3656,101.7656 Q201.0219,101.7656 200.8188,101.5625 Q200.6156,101.375 200.5063,100.8594 Q200.4594,100.5 200.2719,100.3125 Q199.9438,99.9375 199.3344,99.7188 Q198.725,99.5 198.1,99.5 Q197.3344,99.5 196.6938,99.8281 Q196.0688,100.1563 195.5688,100.9063 Q195.0844,101.6563 195.0844,102.6875 L195.0844,103.7813 Q195.0844,105.0156 195.975,105.8438 Q196.8656,106.6563 198.4594,106.6563 Q199.3969,106.6563 200.0531,106.4063 Q200.4438,106.25 200.8656,105.8125 Q201.1313,105.5469 201.2719,105.4688 Q201.4281,105.3906 201.6313,105.3906 Q201.9594,105.3906 202.2094,105.6563 Q202.475,105.9063 202.475,106.25 Q202.475,106.5938 202.1313,107 Q201.6313,107.5781 200.8344,107.9063 Q199.7563,108.3594 198.4594,108.3594 Q196.9438,108.3594 195.7406,107.7344 Q194.7563,107.2344 194.0688,106.1719 Q193.3813,105.0938 193.3813,103.8125 L193.3813,102.6563 Q193.3813,101.3281 193.9906,100.1875 Q194.6156,99.0313 195.7094,98.4219 Q196.8031,97.7969 198.0375,97.7969 Q198.7719,97.7969 199.4125,97.9688 Q200.0688,98.125 200.6156,98.4844 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="217.15" y="107.5195">Request</text><line style="stroke:#A80036;stroke-width:1.5;" x1="160" x2="290" y1="118.6094" y2="118.6094"/><ellipse cx="170" cy="129.6094" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="179" y="134.0283">persistenceId : Long</text><ellipse cx="170" cy="143.4453" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="179" y="147.8643">itemID : String</text><ellipse cx="170" cy="157.2813" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="179" y="161.7002">instock : Boolean</text><ellipse cx="170" cy="171.1172" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="179" y="175.5361">qtyrequested : Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="160" x2="290" y1="181.9531" y2="181.9531"/><!--MD5=[953b3fdf9b98247b27e46f97c8986f1b]
+@startuml
+
+package com.company.model {
+
+    class Request {
+        +persistenceId : Long
+        +itemID : String
+        +instock : Boolean
+        +qtyrequested : Integer
+    }
+
+}
+
+
+legend top left
+&#9830; Composition relation  &#9826; Aggregation relation  &#42; Multiple relation
+endlegend
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 13:20:28 CEST 2021)
+(EPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF8
+Language: en
+Country: US
+--></g></svg>

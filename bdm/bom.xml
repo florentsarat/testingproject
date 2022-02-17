@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.14.0-SNAPSHOT">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Request">
+            <fields>
+                <field type="STRING" length="255" name="itemID" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="instock" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="qtyrequested" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

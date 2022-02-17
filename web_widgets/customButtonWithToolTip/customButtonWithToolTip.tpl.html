@@ -1,0 +1,11 @@
+<div class="text-{{ properties.alignment }}">
+    <button
+        ng-class="'btn btn-' + properties.buttonStyle"
+        ng-click="ctrl.action()"
+        type="button"
+        ng-disabled="properties.disabled || ctrl.busy" ng-bind-html="properties.label | uiTranslate">
+        <span tooltip="hello">
+            <i class="fa fa-book-open">ggg</i> btn disabled
+        </span>
+    </button>
+</div>

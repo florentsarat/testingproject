@@ -1,0 +1,227 @@
+= testingproject
+Generated with Bonita
+v0.0.1, {docdate}
+:toc: left
+:toc-title: Table of contents
+:toclevels: 2
+:bonita-version: 7.14
+:imagesdir: ./documentation/images
+:icons: font
+:sectnums: numbered
+:sectanchors:
+:hardbreaks:
+:experimental:
+
+== Business Data Model
+
+image::bdm.svg[link=images/bdm.svg]
+
+=== Package com.company.model
+
+==== Request
+
+_No description available_
+
+===== icon:list[] Attributes
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Name                                   |Type   |Description
+|[[Request.persistenceId]]persistenceId*|Long   |           
+|[[Request.itemID]]itemID               |String |           
+|[[Request.instock]]instock             |Boolean|           
+|[[Request.qtyrequested]]qtyrequested   |Integer|           
+|===
+
+== Application pages
+
+=== [[_5a0dcd24-82cf-3efd-b1c1-62f20edb2aed]]image:icons/page.png[] test
+
+Page generated with Bonita UI designer
+
+.Widgets
+[caption=,grid=cols,options="header",cols="1,2,4a",stripes=even,frame=topbot]
+|===
+|Type|Label|Description
+|Link|     |           
+|===
+
+== Processes
+
+=== image:icons/Pool.png[title="Process"] [[_2a4f2a39-3d19-3a50-a7eb-3a6da086041a]]InventoryRequest (1.0)
+
+_No description available_
+
+image::processes/InventoryRequest-1.0.png[]
+
+==== icon:users[] Actors
+
+[grid=cols,options="header",cols="1,3a",stripes=even,frame=topbot]
+|===
+|Name                                                                                               |Description                                                 
+|[[_a2628c90-7db6-3989-be3a-dccf74187b66]]Employee actor icon:play-circle[title="Process initiator"]|This is an example of actor that is mapped to any ACME users
+|===
+
+==== Instantiation form
+
+[CAUTION]
+====
+Invalid form mapping. No form specified.
+====
+
+==== icon:list-alt[] Contract inputs
+
+[verse]
+{
+    arequestInput ([teal]_ArequestInput_)
+}
+
+[verse]
+[teal]#ArequestInput# {
+    itemID ([olive]_Text_),
+    qtyrequested ([olive]_Integer_)
+}
+
+==== image:icons/Lane.png[title="Lane"] Employee lane (<<_a2628c90-7db6-3989-be3a-dccf74187b66,icon:user[title="Actor"] Employee actor>>)
+
+_No description available_
+
+==== [[_bab22d67-771c-300d-94da-9c5f0ccc8f2e]]image:icons/StartEvent.png[title="StartEvent"] Start1
+
+_No description available_
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_d5975b4e-0ffd-3515-af42-d048ee9bf77b,Check the Stock>>*
+
+==== [[_d5975b4e-0ffd-3515-af42-d048ee9bf77b]]image:icons/Task.png[title="Task"] Check the Stock
+
+_No description available_
+
+*Previous flow element(s)*: <<_bab22d67-771c-300d-94da-9c5f0ccc8f2e,Start1>>
+
+[CAUTION]
+====
+Invalid form mapping. No form specified.
+====
+
+===== icon:list-alt[] Contract inputs
+
+[verse]
+{
+    invcheckInput ([teal]_InvcheckInput_)
+}
+
+[verse]
+[teal]#InvcheckInput# {
+    instock ([olive]_Boolean_)
+}
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_975bfebc-9349-3ffb-b266-28d1369e2d65,Gateway1>>*
+
+==== [[_975bfebc-9349-3ffb-b266-28d1369e2d65]]image:icons/XORGateway.png[title="XORGateway"] Gateway1
+
+_No description available_
+
+*Previous flow element(s)*: <<_d5975b4e-0ffd-3515-af42-d048ee9bf77b,Check the Stock>>
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+To <<_60ca0ff6-c0c9-3749-9704-21c1f01bd4d8,Send Item>>::
++
+.When:
+[source,groovy]
+----
+arequest.instock
+----
+
+To <<_65e9930e-9d22-38f9-9828-79a44a64a5c3,Send Refusal Notification>>::
++
+.When:
+[source,groovy]
+----
+!arequest.instock
+----
+
+==== [[_60ca0ff6-c0c9-3749-9704-21c1f01bd4d8]]image:icons/ServiceTask.png[title="ServiceTask"] Send Item
+
+_No description available_
+
+*Previous flow element(s)*: <<_975bfebc-9349-3ffb-b266-28d1369e2d65,Gateway1>>
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_53f839a8-1679-3bf6-9965-7b170d085b4d,End1>>*
+
+==== [[_65e9930e-9d22-38f9-9828-79a44a64a5c3]]image:icons/ServiceTask.png[title="ServiceTask"] Send Refusal Notification
+
+_No description available_
+
+*Previous flow element(s)*: <<_975bfebc-9349-3ffb-b266-28d1369e2d65,Gateway1>>
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_53f839a8-1679-3bf6-9965-7b170d085b4d,End1>>*
+
+==== [[_53f839a8-1679-3bf6-9965-7b170d085b4d]]image:icons/EndEvent.png[title="EndEvent"] End1
+
+_No description available_
+
+*Previous flow element(s)*: <<_65e9930e-9d22-38f9-9828-79a44a64a5c3,Send Refusal Notification>>, <<_60ca0ff6-c0c9-3749-9704-21c1f01bd4d8,Send Item>>
+
+== Process diagrams
+
+=== MyDiagram (1.0)
+
+_No description available_
+
+image::diagrams/MyDiagram-1.0.png[]
+
+== Organization
+
+=== Groups
+
+// Uncomment this line in organization_template.tpl to display the group hierarchy diagram.
+// image::groups.svg[link=images/groups.svg]
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Path                     |Display name          |Description                                                                         
+|/acme                    |Acme                  |This group represents the acme department of the ACME organization                  
+|/acme/hr                 |Human Resources       |This group represents the human resources department of the ACME organization       
+|/acme/finance            |Finance               |This group represents the finance department of the ACME organization               
+|/acme/it                 |Infrastructure        |This group represents the infrastructure department of the ACME organization        
+|/acme/marketing          |Marketing             |This group represents the marketing department of the ACME organization             
+|/acme/production         |Production            |This group represents the production department of the ACME organization            
+|/acme/production/rd      |Research & Development|This group represents the research & development department of the ACME organization
+|/acme/production/services|Services              |This group represents the services department of the ACME organization              
+|/acme/sales              |Sales                 |This group represents the sales department of the ACME organization                 
+|/acme/sales/europe       |Europe                |This group represents the europe department of the ACME organization                
+|/acme/sales/asia         |Asia                  |This group represents the asia department of the ACME organization                  
+|/acme/sales/latin_america|Latin America         |This group represents the latin america department of the ACME organization         
+|/acme/sales/north_america|North America         |This group represents the north america department of the ACME organization         
+|===
+
+=== Roles
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Name  |Display name|Description
+|member|Member      |           
+|===
+
+=== Profiles
+
+[grid=cols,options="header",cols="1e,3a",stripes=even,frame=topbot]
+|===
+|Name                                                    |Description                                                                                                                 
+|[[_1300bb05-3afe-3c2d-af8b-543b4fb16c32]]User           |The user can view and perform tasks and can start a new case of a
+process.                                                  
+|[[_080d4ce6-9f34-37f2-a270-2edb021a60ec]]Administrator  |The administrator can install a process, manage the organization, and
+handle some errors (for example, by replaying a task).
+|[[_ec4b68ef-adbc-302e-8811-94d9a8fc9032]]Process manager|The Process manager can supervise designated processes, and manage
+cases and tasks of those processes.                      
+|===
+

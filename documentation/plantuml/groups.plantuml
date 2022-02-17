@@ -1,0 +1,93 @@
+@startuml
+
+object "acme" as acme {
+    Acme
+    This group represents the acme department of the
+    ACME organization
+}
+
+object "hr" as hr {
+    Human Resources
+    This group represents the human resources
+    department of the ACME organization
+}
+
+object "finance" as finance {
+    Finance
+    This group represents the finance department of
+    the ACME organization
+}
+
+object "it" as it {
+    Infrastructure
+    This group represents the infrastructure
+    department of the ACME organization
+}
+
+object "marketing" as marketing {
+    Marketing
+    This group represents the marketing department of
+    the ACME organization
+}
+
+object "production" as production {
+    Production
+    This group represents the production department of
+    the ACME organization
+}
+
+object "rd" as rd {
+    Research & Development
+    This group represents the research & development
+    department of the ACME organization
+}
+
+object "services" as services {
+    Services
+    This group represents the services department of
+    the ACME organization
+}
+
+object "sales" as sales {
+    Sales
+    This group represents the sales department of the
+    ACME organization
+}
+
+object "europe" as europe {
+    Europe
+    This group represents the europe department of the
+    ACME organization
+}
+
+object "asia" as asia {
+    Asia
+    This group represents the asia department of the
+    ACME organization
+}
+
+object "latin_america" as latin_america {
+    Latin America
+    This group represents the latin america department
+    of the ACME organization
+}
+
+object "north_america" as north_america {
+    North America
+    This group represents the north america department
+    of the ACME organization
+}
+
+acme -- hr
+acme -- finance
+acme -- it
+acme -- marketing
+acme -- production
+acme -- sales
+production -- rd
+production -- services
+sales -- europe
+sales -- asia
+sales -- latin_america
+sales -- north_america
+@enduml
