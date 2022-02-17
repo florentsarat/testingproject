@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_i16_UEeeEeyCDJvhceG28g" name="MyDiagram" author="Florent Sarat" bonitaVersion="7.14.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_i16_UUeeEeyCDJvhceG28g" name="InventoryRequest">
       <elements xmi:type="process:Lane" xmi:id="_i16_UkeeEeyCDJvhceG28g" name="Employee lane" actor="_i16_a0eeEeyCDJvhceG28g">
@@ -109,6 +109,40 @@
         </condition>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_i16_a0eeEeyCDJvhceG28g" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_WI1L4I_PEeyiD7Tyy1CJIw" name="Production" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_WI6rcI_PEeyiD7Tyy1CJIw">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_WI6rcY_PEeyiD7Tyy1CJIw" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_WI6rco_PEeyiD7Tyy1CJIw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_WI6rc4_PEeyiD7Tyy1CJIw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_WI6rdI_PEeyiD7Tyy1CJIw"/>
+            <users xmi:type="actormapping:Users" xmi:id="_WI6rdY_PEeyiD7Tyy1CJIw"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L4Y_PEeyiD7Tyy1CJIw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L4o_PEeyiD7Tyy1CJIw" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L44_PEeyiD7Tyy1CJIw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L5I_PEeyiD7Tyy1CJIw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L5Y_PEeyiD7Tyy1CJIw" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_WI1L5o_PEeyiD7Tyy1CJIw" id="OTHER"/>
+      </configurations>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_XByNII_PEeyiD7Tyy1CJIw" name="Qualification" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_XByNJ4_PEeyiD7Tyy1CJIw">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_XByNKI_PEeyiD7Tyy1CJIw" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_XByNKY_PEeyiD7Tyy1CJIw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_XByNKo_PEeyiD7Tyy1CJIw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_XByNK4_PEeyiD7Tyy1CJIw">
+              <role>member</role>
+            </roles>
+            <users xmi:type="actormapping:Users" xmi:id="_XByNLI_PEeyiD7Tyy1CJIw"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNIY_PEeyiD7Tyy1CJIw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNIo_PEeyiD7Tyy1CJIw" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNI4_PEeyiD7Tyy1CJIw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNJI_PEeyiD7Tyy1CJIw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNJY_PEeyiD7Tyy1CJIw" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_XByNJo_PEeyiD7Tyy1CJIw" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_i16_bEeeEeyCDJvhceG28g">
         <inputs xmi:type="process:ContractInput" xmi:id="_K3U8UE09Eeyq1_y0o8WqEA" name="arequestInput" type="COMPLEX" dataReference="arequest">
           <inputs xmi:type="process:ContractInput" xmi:id="_K3U8UU09Eeyq1_y0o8WqEA" name="itemID"/>
